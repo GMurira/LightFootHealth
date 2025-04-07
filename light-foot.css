@@ -603,7 +603,21 @@ ol {
   .socials_section li a img {
       width: 24px; /* Adjust for mobile */
       height: 24px; /* Adjust for mobile */
-      margin-right: 6px; /* Adjust spacing for mobile */
+      margin-right: 0; /* Remove right margin since it's a row */
+      border-radius: 50%; /* Make icons rounded */
+  }
+  .socials_section ul {
+      display: flex; /* Display list items in a row */
+      justify-content: center; /* Center icons horizontally */
+      flex-wrap: nowrap; /* Prevent icons from wrapping */
+  }
+
+  .socials_section li {
+      margin: 10px 10px; /* Adjust margin for row layout */
+  }
+
+  .socials_section li a {
+      padding: 8px; /*adjust padding*/
   }
 }
 

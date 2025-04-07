@@ -1,5 +1,5 @@
 // JavaScript for automatic slideshow
-let slideIndex = 0; //start at zero
+let slideIndex = 0;
 showSlides();
 
 function showSlides() {
@@ -10,16 +10,16 @@ function showSlides() {
         slides[i].style.display = "none";
     }
     slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
+    if (slideIndex > slides.length) { slideIndex = 1; }
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
     setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
 
-//JavaScript for Contact Form
+// JavaScript for Contact Form
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent default form submission
 
@@ -56,11 +56,15 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     });
 });
 
-//JavaScript for mobile menu
-const mobileMenu = document.getElementById('mobile_menu');
-const navMenu = document.querySelector('.navbar_menu');
+// JavaScript for mobile menu
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenu = document.getElementById('mobile_menu');
+    const navMenu = document.querySelector('.navbar_menu');
 
-mobileMenu.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-    navMenu.classList.toggle('active');
+    if (mobileMenu && navMenu) {
+        mobileMenu.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    }
 });
