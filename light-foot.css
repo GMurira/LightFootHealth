@@ -15,7 +15,8 @@ a {
   color: inherit;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -86,14 +87,6 @@ ul, ol {
   transition: all 0.3s ease;
 }
 
-#mobile_menu {
-  display: none;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-}
-
 .bar {
   display: block;
   width: 25px;
@@ -105,7 +98,7 @@ ul, ol {
 
 /* Sliding Image Section */
 .sliding_image_section {
-  padding-top: 80px;
+  padding-top: 0px; /* Changed from 80px */
   padding-bottom: 50px;
   text-align: center;
   background-color: #f9f9f9;
@@ -166,7 +159,8 @@ ul, ol {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
@@ -177,10 +171,10 @@ ul, ol {
 
 @keyframes fade {
   from {
-      opacity: 0.4;
+    opacity: 0.4;
   }
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -217,11 +211,14 @@ ul, ol {
   gap: 20px;
 }
 
-.contact_form_left, .contact_form_middle, .contact_form_right {
+.contact_form_left,
+.contact_form_middle,
+.contact_form_right {
   padding: 20px;
 }
 
-.contact_form_left input, .contact_form_left textarea {
+.contact_form_left input,
+.contact_form_left textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -231,7 +228,7 @@ ul, ol {
 }
 
 .contact_form_left button {
-  background-color: #800000;
+  background-color: #7ba9f2;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -381,7 +378,8 @@ ul, ol {
   justify-content: space-between;
 }
 
-.aboutUs_p1, .aboutUs_p2 {
+.aboutUs_p1,
+.aboutUs_p2 {
   flex: 1 1 45%;
   padding: 30px;
   background-color: white;
@@ -390,19 +388,22 @@ ul, ol {
   margin-bottom: 20px;
 }
 
-.aboutUs_p1 p, .aboutUs_p2 p {
+.aboutUs_p1 p,
+.aboutUs_p2 p {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #555;
 }
 
-.aboutUs_img1, .aboutUs_img2 {
+.aboutUs_img1,
+.aboutUs_img2 {
   flex: 1 1 45%;
   padding: 20px;
   text-align: center;
 }
 
-.aboutUs_img1 img, .aboutUs_img2 img {
+.aboutUs_img1 img,
+.aboutUs_img2 img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
@@ -412,196 +413,217 @@ ul, ol {
 /* About Us Responsive Adjustments */
 @media (max-width: 768px) {
   .aboutIs_Container {
-      flex-direction: column;
+    flex-direction: column;
   }
 
-  .aboutUs_p1, .aboutUs_p2, .aboutUs_img1, .aboutUs_img2 {
-      flex: 1 1 100%;
-      margin-bottom: 20px;
+  .aboutUs_p1,
+  .aboutUs_p2,
+  .aboutUs_img1,
+  .aboutUs_img2 {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
   }
 }
 
 /* Media Query for Responsive Design */
 @media screen and (max-width: 960px) {
   .nav_bar_container {
-      padding: 0 10px;
+    padding: 0;
   }
 
   .navbar_menu {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 80px;
-      left: 0;
-      width: 100%;
-      background-color: rgb(89, 171, 244);
-      z-index: 99;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0; /* Or right:0; if you want it on the right side */
+    width: 0%; /* Initial width to 0 */
+    background-color: rgb(89, 171, 244);
+    z-index: 99;
+    transition: width 0.3s ease; /* Add transition for smooth animation */
   }
 
   .navbar_menu.active {
-      display: flex;
+    display: flex;
+    width: 50%; /* Set width to half of the screen */
+  }
+
+  .nav_bar_toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: #444;
+    transition: all 0.3s ease-in-out;
   }
 
   .navbar_item {
-      width: 100%;
+    width: 100%;
   }
 
   .navbar_link {
-      padding: 1.5rem;
-      color: #ffff;
-      display: block;
+    text-align: center;
+    padding: 2rem;
+    color: #ffff;
+    display: block;
   }
 
-  .nav_bar_toggle { /* Changed from #mobile_menu to .nav_bar_toggle */
-      display: block;
+  .nav_bar_toggle {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
   }
 
-  .nav_bar_toggle.active .bar:nth-child(1) { /* Changed from #mobile_menu.active to .nav_bar_toggle.active */
-      transform: translateY(8px) rotate(45deg);
+  .nav_bar_toggle .bar {
+    display: block;
+    cursor: pointer;
   }
 
-  .nav_bar_toggle.active .bar:nth-child(2) { /* Changed from #mobile_menu.active to .nav_bar_toggle.active */
-      opacity: 0;
+  .nav_bar_toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
   }
 
-  .nav_bar_toggle.active .bar:nth-child(3) { /* Changed from #mobile_menu.active to .nav_bar_toggle.active */
-      transform: translateY(-8px) rotate(-45deg);
+  .nav_bar_toggle.active .bar:nth-child(2) {
+    opacity: 0;
   }
 
-  .nav_bar_toggle.active .bar:nth-child(4) { /* Changed from #mobile_menu.active to .nav_bar_toggle.active */
-      display: none;
+  .nav_bar_toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 }
 
 /* Mobile Responsive Adjustments for Slideshow */
 @media screen and (max-width: 768px) {
   .sliding_image_section {
-      padding-top: 80px;
-      padding-bottom: 30px;
+    padding-top: 80px;
+    padding-bottom: 30px;
   }
 
   .my_slides img {
-      height: 400px;
-      object-fit: cover;
-      width: 100%;
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
   }
 
   .dot {
-      height: 12px;
-      width: 12px;
+    height: 12px;
+    width: 12px;
   }
 
   /* Adjust image in Who we are section on mobile */
   .informatin_image_conatiner img {
-      max-height: 300px;
+    max-height: 300px;
   }
 }
 
 /* Contact Form Section (Adjusted) - Mobile Specific */
 @media (max-width: 768px) {
   .contact_form_section {
-      padding: 20px;
+    padding: 20px;
   }
 
   .contact_form_container {
-      grid-template-columns: 1fr;
-      gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
-  .contact_form_left, .contact_form_middle, .contact_form_right {
-      padding: 15px;
+  .contact_form_left,
+  .contact_form_middle,
+  .contact_form_right {
+    padding: 15px;
   }
 
-  .contact_form_left input, .contact_form_left textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 10px;
-      background-color: #444;
-      border: none;
-      color: #fff;
-      font-size: 1rem;
+  .contact_form_left input,
+  .contact_form_left textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: #444;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
   }
 
   .contact_form_left button {
-      width: 100%;
-      padding: 14px 20px;
-      font-size: 1.1rem;
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 1.1rem;
   }
 
   .contact_form_middle ul {
-      padding: 0;
+    padding: 0;
   }
 
   .contact_form_middle li {
-      margin-bottom: 8px;
+    margin-bottom: 8px;
   }
 
   .contact_form_middle a {
-      display: block;
-      color: #fff;
-      text-decoration: none;
-      font-size: 1 rem;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1 rem;
   }
 
   .contact_form_right .logo-circle {
-      width: 80px;
-      height: 80px;
-      margin: 0 auto 20px;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
   }
 
   .contact_form_right .contact-info div {
-      display: flex;
-      align-items: center;
-      margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
   }
 
   .contact_form_right .contact-info img {
-      width: 25px;
-      margin-right: 10px;
+    width: 25px;
+    margin-right: 10px;
   }
 
   .contact_form_right .contact-info p {
-      font-size: 0.95rem;
+    font-size: 0.95rem;
   }
 
   .instagram-brands {
-      /* Adjust Instagram brands styling for mobile */
+    /* Adjust Instagram brands styling for mobile */
   }
 
   .footer {
-      text-align: center;
-      margin-top: 30px;
-      padding: 10px;
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
   }
 
   .contact_form_right .contact-info .phone div {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .contact_form_right .contact-info .phone div p {
-      margin-bottom: 5px;
+    margin-bottom: 5px;
   }
 
   /* Social Media Icons Size Adjustment for Mobile */
   .socials_section li a img {
-      width: 24px;
-      height: 24px;
-      margin-right: 0;
-      border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin-right: 0;
+    border-radius: 50%;
   }
   .socials_section ul {
-      display: flex;
-      justify-content: center;
-      flex-wrap: nowrap;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
   }
 
   .socials_section li {
-      margin: 10px 10px;
+    margin: 10px 10px;
   }
 
   .socials_section li a {
-      padding: 8px;
+    padding: 8px;
   }
 }
 
@@ -630,11 +652,11 @@ ul, ol {
 
 .dropdown-content {
   display: none;
-      position: absolute;
+  position: absolute;
   background-color: #f9f9f9;
-      min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .dropdown-content a {
@@ -684,15 +706,35 @@ ul, ol {
 /* Show the button only on mobile devices */
 @media (max-width: 768px) {
   .floating-button {
-      display: flex; /* Show the button */
-      bottom: 10px;
-      right: 10px;
-      width: 50px;
-      height: 50px;
+    display: flex; /* Show the button */
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
   }
 
   .floating-button img {
-      width: 25px;
-      height: 25px;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Desktop Styles (No Hamburger) */
+@media screen and (min-width: 961px) {
+  .nav_bar_toggle {
+    display: none; /* Hide hamburger menu on desktop */
+  }
+
+  .navbar_menu {
+    display: flex; /* Show full menu on desktop */
+    position: static;
+    flex-direction: row;
+    width: auto;
+    background-color: transparent;
+  }
+
+  .navbar_link {
+    color: #0b0000;
+    padding: 0 1rem;
   }
 }
