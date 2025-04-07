@@ -162,8 +162,8 @@
             <div class="contact_form_left">
                 <h2>Contact Us</h2>
                 <p>Send us a message</p>
-                <form id="contactForm">
-                    <input type="text" id="fname" name="fname" placeholder="Full name" required><br>
+                <form id="contactForm"  action="https://formsubmit.co/nguyaimurira@gmail.com" method="post">
+                    <input type="text" id="fname" name="name" placeholder="Full name" required><br>
                     <input type="email" id="email" name="email" placeholder="Your Email" required><br>
                     <textarea id="message" name="message" placeholder="Your Message" required></textarea><br>
                     <button type="submit" class="form_button">Submit</button>
@@ -233,29 +233,6 @@
             dots[slideIndex - 1].className += " active";
             setTimeout(showSlides, 3000); // Change image every 3 seconds
         }
-    </script>
-    <script>
-        //JavaScript for Contact Form
-        document.getElementById('contactForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent default form submission
-            const form = event.target;
-            const formData = new FormData(form);
-            fetch('/submit-form', { // Replace '/submit-form' with your server endpoint
-                method: 'POST',
-                body: formData,
-            })
-                .then(response => response.json()) //parse response to json format.
-                .then(data => {
-                    document.getElementById('form-message').textContent = data.message;
-                    if (data.success) {
-                        form.reset(); //reset form after success.
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    document.getElementById('form-message').textContent = 'An error occurred. Please try again.';
-                });
-        });
     </script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
