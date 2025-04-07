@@ -105,8 +105,8 @@
   
   /* Sliding Image Section */
   .sliding_image_section {
-    padding-top: 80px; /* Adjusted padding: moved padding to the top to match navbar height */
-    padding-bottom: 50px; /* Keep existing bottom padding or adjust as needed */
+    padding-top: 80px;
+    padding-bottom: 50px;
     text-align: center;
     background-color: #f9f9f9;
   }
@@ -114,7 +114,7 @@
   .slideshow_container {
     width: 100%;
     position: relative;
-    margin: 40px auto;
+    margin-bottom: 40px;
   }
   
   .my_slides {
@@ -240,7 +240,6 @@
       display: block;
     }
   
-    /* Style the hamburger menu when active (optional) */
     #mobile_menu.active .bar:nth-child(1) {
       transform: translateY(8px) rotate(45deg);
     }
@@ -258,135 +257,90 @@
     }
   }
   
-  /* Contact Form Section (Added) */
+  /* Contact Form Section (Adjusted) */
   .contact_form_section {
-    padding: 60px 20px;
-    background-color: #f4f4f4;
+      background-color: #333;
+      color: #fff;
+      padding: 40px;
   }
   
   .contact_form_container {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
   }
   
-  .contactForm {
-    flex: 2 1 50%;
-    padding: 30px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  .contact_form_left,
+  .contact_form_middle,
+  .contact_form_right {
+      padding: 20px;
   }
   
-  .contactForm h2 {
-      font-size: 2rem;
+  .contact_form_left input,
+  .contact_form_left textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #444;
+      border: none;
+      color: #fff;
+  }
+  
+  .contact_form_left button {
+      background-color: #800000;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+  }
+  
+  .contact_form_middle ul {
+      list-style: none;
+      padding: 0;
+  }
+  
+  .contact_form_middle a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 5px;
+  }
+  
+  .contact_form_right .logo-circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #ccc;
       margin-bottom: 20px;
-      color: #333;
+      overflow: hidden;
+  }
+  
+  .contact_form_right .logo-circle img {
+      width: 100%;
+      height: auto;
+  }
+  
+  .contact_form_right .contact-info div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+  }
+  
+  .contact_form_right .contact-info img {
+      width: 30px;
+      margin-right: 10px;
+  }
+  
+  .instagram-brands {
+      /* Style for Instagram brand logos/links */
+  }
+  
+  .footer {
       text-align: center;
+      margin-top: 40px;
   }
   
-  .contactForm label,
-  .contactForm input,
-  .contactForm textarea,
-  .contactForm button {
-    display: block;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  
-  .contactForm label {
-    font-weight: 600;
-    color: #333;
-  }
-  
-  .contactForm input {
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-  }
-  
-  .contactForm textarea {
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-    resize: vertical;
-    min-height: 250px;
-  }
-  
-  .contactForm input:focus,
-  .contactForm textarea:focus {
-    border-color: #007bff;
-    outline: none;
-  }
-  
-  .form_button {
-    background-color: #007bff;
-    color: white;
-    padding: 14px 25px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .form_button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .contact_form_list,
-  .phone_numbers {
-    flex: 1 1 25%;
-    padding: 30px;
-  }
-  
-  .contact_form_list h3,
-  .phone_numbers h3{
-      font-size: 1.5rem;
-      margin-bottom: 15px;
-  }
-  
-  .contact_form_list a,
-  .phone_numbers a {
-    display: block;
-    margin-bottom: 15px;
-    color: #555;
-    transition: color 0.3s ease;
-  }
-  
-  .contact_form_list a:hover,
-  .phone_numbers a:hover {
-    color: #007bff;
-  }
-  
-  .phone_numbers ol {
-    padding-left: 20px;
-  }
-  
-  /* Contact Form Responsive Adjustments */
-  @media (max-width: 768px) {
-    .contact_form_container {
-      flex-direction: column;
-    }
-  
-    .contactForm,
-    .contact_form_list,
-    .phone_numbers {
-      flex: 1 1 100%;
-      margin-bottom: 30px;
-    }
-  }
-  
-  /* Learn more button styling (Added) */
+  /* Learn more button styling */
   .Learn_more_button {
     background-color: #007bff;
     color: white;
@@ -405,7 +359,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
-  /* Social Media Section (Added) */
+  /* Social Media Section */
   .social_media_section {
     padding: 60px 20px;
     background-color: #f0f8ff;
@@ -476,7 +430,7 @@
     }
   }
   
-  /* About Us Section (Added) */
+  /* About Us Section */
   .aboutUs_section {
     padding: 60px 20px;
     background-color: #f8f8f8;
@@ -541,8 +495,8 @@
   /* Mobile Responsive Adjustments for Slideshow */
   @media screen and (max-width: 768px) {
     .sliding_image_section {
-      padding-top: 80px; /* Keep top padding the same for mobile */
-      padding-bottom: 30px; /* Keep existing bottom padding or adjust as needed */
+      padding-top: 80px;
+      padding-bottom: 30px;
     }
   
     .my_slides img {
@@ -553,4 +507,104 @@
       height: 12px;
       width: 12px;
     }
+  }
+  
+  /* Contact Form Section (Adjusted) - Mobile Specific */
+  @media (max-width: 768px) {
+      .contact_form_section {
+          padding: 20px; /* Reduced padding for smaller screens */
+      }
+  
+      .contact_form_container {
+          grid-template-columns: 1fr; /* Single column layout for mobile */
+          gap: 20px; /* Adjust gap as needed */
+      }
+  
+      .contact_form_left,
+      .contact_form_middle,
+      .contact_form_right {
+          padding: 15px; /* Reduced padding for mobile */
+      }
+  
+      .contact_form_left input,
+      .contact_form_left textarea {
+          width: 100%;
+          padding: 12px; /* Slightly larger padding for better touch input */
+          margin-bottom: 10px;
+          background-color: #444;
+          border: none;
+          color: #fff;
+          font-size: 1rem; /* Increase font size */
+      }
+  
+      .contact_form_left button {
+          width: 100%; /* Full width button */
+          padding: 14px 20px; /* Larger button for easier tapping */
+          font-size: 1.1rem; /* Increase font size */
+      }
+  
+      .contact_form_middle ul {
+          padding: 0;
+      }
+  
+      .contact_form_middle li {
+          margin-bottom: 8px; /* Spacing between list items */
+      }
+  
+      .contact_form_middle a {
+          display: block;
+          color: #fff;
+          text-decoration: none;
+          font-size: 1rem; /* Increase font size */
+      }
+  
+      .contact_form_right .logo-circle {
+          width: 80px; /* Slightly smaller logo circle */
+          height: 80px;
+          margin: 0 auto 20px; /* Center logo and add bottom margin */
+      }
+  
+      .contact_form_right .contact-info div {
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px; /* Increased spacing */
+      }
+  
+      .contact_form_right .contact-info img {
+          width: 25px; /* Slightly smaller icons */
+          margin-right: 10px;
+      }
+  
+      .contact_form_right .contact-info p {
+          font-size: 0.95rem; /* Adjust font size */
+      }
+  
+      .instagram-brands {
+          /* Adjust Instagram brands styling for mobile */
+      }
+  
+      .footer {
+          text-align: center;
+          margin-top: 30px; /* Reduced margin */
+          padding: 10px; /* Add some padding */
+      }
+  
+      .contact_form_right .contact-info .phone div {
+          flex-direction: column; /* Phone numbers in a column */
+          align-items: flex-start; /* Align numbers to the start */
+      }
+  
+      .contact_form_right .contact-info .phone div p {
+          margin-bottom: 5px; /* Add spacing between numbers */
+      }
+  }
+  
+  /* Contact Form Section (Desktop phone number column) */
+  .contact_form_right .contact-info .phone div {
+    flex-direction: column; /* Phone numbers in a column */
+    align-items: flex-start; /* Align numbers to the start */
+  }
+  
+  .contact_form_right .contact-info .phone div p {
+    margin-bottom: 5px; /* Add spacing between numbers */
   }
