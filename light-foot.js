@@ -1,23 +1,32 @@
 // JavaScript for automatic slideshow
 let slideIndex = 0;
-showSlides();
+const slideDelay = 3000; // Configurable slide delay
 
 function showSlides() {
     let i;
-    let slides = document.getElementsByClassName("my_slides");
-    let dots = document.getElementsByClassName("dot");
+    const slides = document.getElementsByClassName("my_slides");
+    const dots = document.getElementsByClassName("dot");
+
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
+
     slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1; }
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
+
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
+
+    setTimeout(showSlides, slideDelay);
 }
+
+showSlides(); // Start slideshow
 
 // JavaScript for Contact Form
 document.getElementById('contactForm').addEventListener('submit', function(event) {
@@ -27,9 +36,10 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const formData = new FormData(form);
     const formMessage = document.getElementById('form-message');
 
-    formMessage.textContent = 'Sending...'; // Indicate that the form is being sent
+    formMessage.textContent = 'Sending...';
+    formMessage.style.color = 'blue'; // Indicate sending with blue
 
-    fetch('/submit-form', { // Replace '/submit-form' with your server endpoint
+    fetch('send_email.php', { // Ensure this matches your PHP file's name
         method: 'POST',
         body: formData,
     })
@@ -41,30 +51,54 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     })
     .then(data => {
         if (data.success) {
-            formMessage.textContent = 'Email sent successfully!';
-            formMessage.style.color = 'green'; // Change message color to green for success
-            form.reset(); // Reset form after success
+            formMessage.textContent = data.message || 'Email sent successfully!';
+            formMessage.style.color = 'green';
+            form.reset();
         } else {
             formMessage.textContent = data.message || 'Email sending failed. Please try again.';
-            formMessage.style.color = 'red'; // Change message color to red for failure
+            formMessage.style.color = 'red';
         }
     })
     .catch(error => {
         console.error('Error:', error);
         formMessage.textContent = 'An error occurred. Please try again.';
-        formMessage.style.color = 'red'; // Change message color to red for errors
+        formMessage.style.color = 'red';
     });
 });
 
-// JavaScript for mobile menu
+// JavaScript for mobile menu and dropdown
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenu = document.getElementById('mobile_menu');
     const navMenu = document.querySelector('.navbar_menu');
+    const dropdownItems = document.querySelectorAll('.navbar_item.dropdown');
 
     if (mobileMenu && navMenu) {
         mobileMenu.addEventListener('click', function() {
             mobileMenu.classList.toggle('active');
             navMenu.classList.toggle('active');
+            const isExpanded = navMenu.classList.contains('active');
+            navMenu.setAttribute('aria-expanded', isExpanded);
+        });
+
+        navMenu.setAttribute('aria-expanded', 'false');
+
+        dropdownItems.forEach(item => {
+            const dropdownContent = item.querySelector('.dropdown-content');
+            if (dropdownContent) {
+                item.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    dropdownContent.classList.toggle('show');
+                });
+            }
+        });
+
+        window.addEventListener('click', function(event) {
+            dropdownItems.forEach(item => {
+                const dropdownContent = item.querySelector('.dropdown-content');
+                if (dropdownContent && dropdownContent.classList.contains('show') && !item.contains(event.target)) {
+                    dropdownContent.classList.remove('show');
+                }
+            });
         });
     }
 });

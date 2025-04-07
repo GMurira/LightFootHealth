@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="light-foot.css">
     <script src="light-foot.js" defer></script>
     <title>Light Foot Health Care Limited</title>
+    <link rel="icon" href="images/fav-icon.jpeg" type="image/jpeg">
 </head>
+
 <body>
     <nav class="nav_bar">
         <div class="nav_bar_container">
@@ -22,6 +25,16 @@
                     <a href="/" class="navbar_link">
                         Home
                     </a>
+                </li>
+                <li class="navbar_item dropdown">
+                    <a href="#" class="navbar_link">
+                        Services
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="/service1" class="navbar_link">Service 1</a>
+                        <a href="/service2" class="navbar_link">Service 2</a>
+                        <a href="/service3" class="navbar_link">Service 3</a>
+                    </div>
                 </li>
                 <li class="navbar_item">
                     <a href="#contact-section" class="navbar_link">
@@ -41,7 +54,6 @@
             </ul>
         </div>
     </nav>
-
     <section class="sliding_image_section">
         <div class="slideshow_container">
             <div class="my_slides fade">
@@ -49,20 +61,17 @@
                 <img src="images/a man in a lab coat standing with his arms crossed, medical background.jfif" alt="Slide 1">
                 <div class="slide_text">Securing Your Health, Easing Your Worries.</div>
             </div>
-
             <div class="my_slides fade">
                 <div class="number_text">2 / 3</div>
                 <img src="images/Afrika humanitaire hulp arts die voor de patiënt zorgt _ Gratis Foto.jfif" alt="Slide 2">
                 <div class="slide_text">Financial Support for Your Healthcare Needs.</div>
             </div>
-
             <div class="my_slides fade">
                 <div class="number_text">3 / 3</div>
                 <img src="images/Premium Photo _ Black nurse isolated at the hospital.jfif" alt="Slide 3">
                 <div class="slide_text">Light Foot: Your Partner in Health and Security.</div>
             </div>
         </div>
-
         <div class="dot_container">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
@@ -90,13 +99,17 @@
         <div class="aboutIs_Container">
             <div class="aboutUs_p1">
                 <p>Learn More About Our Community and Mission at LightFoot Health Care Limited
-                    Delve into the core values and mission that drive our organization. Learn how we foster a supportive community by providing financial assistance for healthcare expenses. Discover our history, registration details, and how you can become a part of our growing network.</p>
+                    Delve into the core values and mission that drive our organization. Learn how we foster a supportive
+                    community by providing financial assistance for healthcare expenses. Discover our history,
+                    registration details, and how you can become a part of our growing network.</p>
             </div>
             <div class="aboutUs_img1">
                 <img src="images/55d59bef-996f-4500-9fad-938df27f16d5.jfif" alt="about us image">
             </div>
             <div class="aboutUs_p2">
-                <p>Get a detailed understanding of our operational structure, monthly contribution model, and claims process. Learn how our registered organization assists members with settling hospital bills and provides financial security.</p>
+                <p>Get a detailed understanding of our operational structure, monthly contribution model, and claims
+                    process. Learn how our registered organization assists members with settling hospital bills and
+                    provides financial security.</p>
             </div>
             <div class="aboutUs_img2 ">
                 <img src="images/f6b60cc7-f3b1-4459-9f27-ce27e15f960f.jfif" alt="about us image">
@@ -109,7 +122,8 @@
                 <h1>Visit us on our social media.</h1>
             </div>
             <div>
-                <p>Learn more about Light Foot Health Care Limited and stay informed. Visit our official social media channels for details.</p>
+                <p>Learn more about Light Foot Health Care Limited and stay informed. Visit our official social media
+                    channels for details.</p>
             </div>
             <div>
                 <ul class="social_media_icons">
@@ -181,8 +195,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="instagram-brands">
+            <div class="instagram-brands">
+            </div>
         </div>
     </section>
     <section class="footer_section">
@@ -203,12 +217,14 @@
                 slides[i].style.display = "none";
             }
             slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
             setTimeout(showSlides, 3000); // Change image every 3 seconds
         }
     </script>
@@ -216,26 +232,26 @@
         //JavaScript for Contact Form
         document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent default form submission
-
             const form = event.target;
             const formData = new FormData(form);
-
             fetch('/submit-form', { // Replace '/submit-form' with your server endpoint
-                method: 'POST',
-                body: formData,
-            })
-            .then(response => response.json()) //parse response to json format.
-            .then(data => {
-                document.getElementById('form-message').textContent = data.message;
-                if(data.success) {
-                    form.reset(); //reset form after success.
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById('form-message').textContent = 'An error occurred. Please try again.';
-            });
+                    method: 'POST',
+                    body: formData,
+                })
+                .then(response => response.json()) //parse response to json format.
+                .then(data => {
+                    document.getElementById('form-message').textContent = data.message;
+                    if (data.success) {
+                        form.reset(); //reset form after success.
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('form-message').textContent = 'An error occurred. Please try again.';
+                });
         });
     </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
+
 </html>
