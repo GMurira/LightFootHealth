@@ -607,11 +607,11 @@ ol {
 
   /* Social Media Icons Size Adjustment for Mobile */
   .socials_section li a img {
-    width: 24px;
-    height: 24px;
-    margin-right: 0;
-    border-radius: 50%;
+    width: 24px; /* Adjusted to 24px */
+    height: 24px; /* Adjusted to 24px */
+    margin-right: 8px; /* Adjusted to 8px */
   }
+
   .socials_section ul {
     display: flex;
     justify-content: center;
