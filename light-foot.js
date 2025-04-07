@@ -70,7 +70,8 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenu = document.getElementById('mobile_menu');
     const navMenu = document.querySelector('.navbar_menu');
-    const dropdownItems = document.querySelectorAll('.navbar_item.dropdown');
+    const dropdownLink = document.querySelector('.navbar_item.dropdown > .navbar_link'); // Select the link
+    const dropdownContent = document.querySelector('.dropdown-content'); // Select the dropdown content
 
     if (mobileMenu && navMenu) {
         mobileMenu.addEventListener('click', function() {
@@ -82,23 +83,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
         navMenu.setAttribute('aria-expanded', 'false');
 
-        dropdownItems.forEach(item => {
-            const dropdownContent = item.querySelector('.dropdown-content');
-            if (dropdownContent) {
-                item.addEventListener('click', function(event) {
-                    event.stopPropagation();
-                    dropdownContent.classList.toggle('show');
-                });
-            }
-        });
+        if (dropdownLink && dropdownContent) {
+            dropdownLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                dropdownContent.classList.toggle('show');
+            });
 
-        window.addEventListener('click', function(event) {
-            dropdownItems.forEach(item => {
-                const dropdownContent = item.querySelector('.dropdown-content');
-                if (dropdownContent && dropdownContent.classList.contains('show') && !item.contains(event.target)) {
+            window.addEventListener('click', function(event) {
+                if (!dropdownLink.contains(event.target) && !dropdownContent.contains(event.target)) {
                     dropdownContent.classList.remove('show');
                 }
             });
-        });
+        }
     }
 });

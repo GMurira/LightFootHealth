@@ -15,8 +15,7 @@ a {
   color: inherit;
 }
 
-ul,
-ol {
+ul, ol {
   list-style: none;
 }
 
@@ -167,8 +166,7 @@ ol {
   transition: background-color 0.6s ease;
 }
 
-.active,
-.dot:hover {
+.active, .dot:hover {
   background-color: #717171;
 }
 
@@ -181,7 +179,6 @@ ol {
   from {
       opacity: 0.4;
   }
-
   to {
       opacity: 1;
   }
@@ -220,14 +217,11 @@ ol {
   gap: 20px;
 }
 
-.contact_form_left,
-.contact_form_middle,
-.contact_form_right {
+.contact_form_left, .contact_form_middle, .contact_form_right {
   padding: 20px;
 }
 
-.contact_form_left input,
-.contact_form_left textarea {
+.contact_form_left input, .contact_form_left textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -353,9 +347,9 @@ ol {
   border-radius: 6px;
   font-weight: 600;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  display: flex; /* Added to align icon and text */
-  align-items: center; /* Added to align icon and text */
-  justify-content: center; /*Added to align icon and text*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .socials_section li a:hover {
@@ -366,10 +360,10 @@ ol {
 
 /* Social Media Icons Size Adjustment */
 .socials_section li a img {
-  width: 28px; /* Slightly smaller for better fit */
-  height: 28px; /* Slightly smaller for better fit */
+  width: 28px;
+  height: 28px;
   vertical-align: middle;
-  margin-right: 8px; /* Add some space between icon and any potential text */
+  margin-right: 8px;
 }
 
 /* About Us Section */
@@ -387,8 +381,7 @@ ol {
   justify-content: space-between;
 }
 
-.aboutUs_p1,
-.aboutUs_p2 {
+.aboutUs_p1, .aboutUs_p2 {
   flex: 1 1 45%;
   padding: 30px;
   background-color: white;
@@ -397,22 +390,19 @@ ol {
   margin-bottom: 20px;
 }
 
-.aboutUs_p1 p,
-.aboutUs_p2 p {
+.aboutUs_p1 p, .aboutUs_p2 p {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #555;
 }
 
-.aboutUs_img1,
-.aboutUs_img2 {
+.aboutUs_img1, .aboutUs_img2 {
   flex: 1 1 45%;
   padding: 20px;
   text-align: center;
 }
 
-.aboutUs_img1 img,
-.aboutUs_img2 img {
+.aboutUs_img1 img, .aboutUs_img2 img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
@@ -425,10 +415,7 @@ ol {
       flex-direction: column;
   }
 
-  .aboutUs_p1,
-  .aboutUs_p2,
-  .aboutUs_img1,
-  .aboutUs_img2 {
+  .aboutUs_p1, .aboutUs_p2, .aboutUs_img1, .aboutUs_img2 {
       flex: 1 1 100%;
       margin-bottom: 20px;
   }
@@ -506,42 +493,39 @@ ol {
 
   /* Adjust image in Who we are section on mobile */
   .informatin_image_conatiner img {
-      max-height: 300px; /* Adjust as needed for mobile */
+      max-height: 300px;
   }
 }
 
 /* Contact Form Section (Adjusted) - Mobile Specific */
 @media (max-width: 768px) {
   .contact_form_section {
-      padding: 20px; /* Reduced padding for smaller screens */
+      padding: 20px;
   }
 
   .contact_form_container {
-      grid-template-columns: 1fr; /* Single column layout for mobile */
-      gap: 20px; /* Adjust gap as needed */
+      grid-template-columns: 1fr;
+      gap: 20px;
   }
 
-  .contact_form_left,
-  .contact_form_middle,
-  .contact_form_right {
-      padding: 15px; /* Reduced padding for mobile */
+  .contact_form_left, .contact_form_middle, .contact_form_right {
+      padding: 15px;
   }
 
-  .contact_form_left input,
-  .contact_form_left textarea {
+  .contact_form_left input, .contact_form_left textarea {
       width: 100%;
-      padding: 12px; /* Slightly larger padding for better touch input */
+      padding: 12px;
       margin-bottom: 10px;
       background-color: #444;
       border: none;
       color: #fff;
-      font-size: 1rem; /* Increase font size */
+      font-size: 1rem;
   }
 
   .contact_form_left button {
-      width: 100%; /* Full width button */
-      padding: 14px 20px; /* Larger button for easier tapping */
-      font-size: 1.1rem; /* Increase font size */
+      width: 100%;
+      padding: 14px 20px;
+      font-size: 1.1rem;
   }
 
   .contact_form_middle ul {
@@ -549,35 +533,35 @@ ol {
   }
 
   .contact_form_middle li {
-      margin-bottom: 8px; /* Spacing between list items */
+      margin-bottom: 8px;
   }
 
   .contact_form_middle a {
       display: block;
       color: #fff;
       text-decoration: none;
-      font-size: 1 rem; /* Increase font size */
+      font-size: 1 rem;
   }
 
   .contact_form_right .logo-circle {
-      width: 80px; /* Slightly smaller logo circle */
+      width: 80px;
       height: 80px;
-      margin: 0 auto 20px; /* Center logo and add bottom margin */
+      margin: 0 auto 20px;
   }
 
   .contact_form_right .contact-info div {
       display: flex;
       align-items: center;
-      margin-bottom: 15px; /* Increased spacing */
+      margin-bottom: 15px;
   }
 
   .contact_form_right .contact-info img {
-      width: 25px; /* Slightly smaller icons */
+      width: 25px;
       margin-right: 10px;
   }
 
   .contact_form_right .contact-info p {
-      font-size: 0.95rem; /* Adjust font size */
+      font-size: 0.95rem;
   }
 
   .instagram-brands {
@@ -586,57 +570,57 @@ ol {
 
   .footer {
       text-align: center;
-      margin-top: 30px; /* Reduced margin */
-      padding: 10px; /* Add some padding */
+      margin-top: 30px;
+      padding: 10px;
   }
 
   .contact_form_right .contact-info .phone div {
-      flex-direction: column; /* Phone numbers in a column */
-      align-items: flex-start; /* Align numbers to the start */
+      flex-direction: column;
+      align-items: flex-start;
   }
 
   .contact_form_right .contact-info .phone div p {
-      margin-bottom: 5px; /* Add spacing between numbers */
+      margin-bottom: 5px;
   }
 
   /* Social Media Icons Size Adjustment for Mobile */
   .socials_section li a img {
-      width: 24px; /* Adjust for mobile */
-      height: 24px; /* Adjust for mobile */
-      margin-right: 0; /* Remove right margin since it's a row */
-      border-radius: 50%; /* Make icons rounded */
+      width: 24px;
+      height: 24px;
+      margin-right: 0;
+      border-radius: 50%;
   }
   .socials_section ul {
-      display: flex; /* Display list items in a row */
-      justify-content: center; /* Center icons horizontally */
-      flex-wrap: nowrap; /* Prevent icons from wrapping */
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
   }
 
   .socials_section li {
-      margin: 10px 10px; /* Adjust margin for row layout */
+      margin: 10px 10px;
   }
 
   .socials_section li a {
-      padding: 8px; /*adjust padding*/
+      padding: 8px;
   }
 }
 
 /* Contact Form Section (Desktop phone number column) */
 .contact_form_right .contact-info .phone div {
-  flex-direction: column; /* Phone numbers in a column */
-  align-items: flex-start; /* Align numbers to the start */
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .contact_form_right .contact-info .phone div p {
-  margin-bottom: 5px; /* Add spacing between numbers */
+  margin-bottom: 5px;
 }
 
 /* Adjust Image in Who We Are Section */
 .informatin_image_conatiner img {
-  width: 100%; /* Ensure it fits the container width */
-  height: auto; /* Allow height to adjust proportionally */
-  max-height: 400px; /* Optional: Limit maximum height */
-  object-fit: cover; /* or object-fit: contain; depending on your preference */
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
 }
 
 /* Dropdown Menu CSS */
@@ -666,4 +650,49 @@ ol {
 
 .dropdown-content.show {
   display: block;
+}
+
+/* Floating Action Button */
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: none; /* Initially hide the button */
+}
+
+.floating-button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.floating-button img {
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+
+/* Show the button only on mobile devices */
+@media (max-width: 768px) {
+  .floating-button {
+      display: flex; /* Show the button */
+      bottom: 10px;
+      right: 10px;
+      width: 50px;
+      height: 50px;
+  }
+
+  .floating-button img {
+      width: 25px;
+      height: 25px;
+  }
 }
