@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="light-foot.css">
+    <script src="light-foot.js" defer></script> 
     <title>Light Foot Health Care Limited</title>
 </head>
 <body>
     <nav class="nav_bar">
         <div class="nav_bar_container">
-            <a href="" id="nav_bar_logo">light-foot</a>
+            <a href="" id="nav_bar_logo"><img src="images/lightFootLogo.jpeg" alt="Light Foot Logo"></a>
             <div class="nav_bar_toggle" id="mobile_menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -23,60 +24,55 @@
                     </a>
                 </li>
                 <li class="navbar_item">
-                    <a href="/" class="navbar_link">
+                    <a href="#contact-section" class="navbar_link">
                         Contact us
                     </a>
                 </li>
                 <li class="navbar_item">
-                    <a href="/" class="navbar_link">
+                    <a href="#learn-more-section" class="navbar_link">
                         Learn More
                     </a>
                 </li>
                 <li class="navbar_item">
-                    <a href="/" class="navbar_link">
-                     Contact Us
+                    <a href="#contact-section" class="navbar_link">
+                        Contact Us
                     </a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <!--Sliding image section-->
     <section class="sliding_image_section">
         <div class="slideshow_container">
-          <div class="my_slides fade">
-            <div class="number_text">1 / 3</div>
-            <img src="image1.jpg" alt="Slide 1">
-            <div class="slide_text">Caption Text 1</div>
-          </div>
-      
-          <div class="my_slides fade">
-            <div class="number_text">2 / 3</div>
-            <img src="image2.jpg" alt="Slide 2">
-            <div class="slide_text">Caption Text 2</div>
-          </div>
-      
-          <div class="my_slides fade">
-            <div class="number_text">3 / 3</div>
-            <img src="image3.jpg" alt="Slide 3">
-            <div class="slide_text">Caption Text 3</div>
-          </div>
-      
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="my_slides fade">
+                <div class="number_text">1 / 3</div>
+                <img src="images/a man in a lab coat standing with his arms crossed, medical background.jfif" alt="Slide 1">
+                <div class="slide_text">Caption Text 1</div>
+            </div>
+        
+            <div class="my_slides fade">
+                <div class="number_text">2 / 3</div>
+                <img src="images/Afrika humanitaire hulp arts die voor de patiënt zorgt _ Gratis Foto.jfif" alt="Slide 2">
+                <div class="slide_text">Caption Text 2</div>
+            </div>
+        
+            <div class="my_slides fade">
+                <div class="number_text">3 / 3</div>
+                <img src="images/Premium Photo _ Black nurse isolated at the hospital.jfif" alt="Slide 3">
+                <div class="slide_text">Caption Text 3</div>
+            </div>
         </div>
-      
+        
         <div class="dot_container">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
         </div>
-      </section>
-    <!--Who we are section-->
+    </section>
     <section class="infomation_section">
         <div class="information_container">
             <div class="informatin_image_conatiner">
-                <img>
+                <img src="" alt="Information Image">
             </div>
             <div class="information_text">
                 <p>Who we are</p>
@@ -86,29 +82,27 @@
                 <p>Light Foot Health Care Limited is a registered organization where members contribute monthly for health benefits. It was started and registered in 2024 to help members pay hospital bills. Our main office is in Nairobi City, on Moi Avenue, Imenti House, 1st floor.</p>
             </div>
             <div class="information_button">
-                <button class="Learn_more_button">Learn More</button>
+                <a href="#learn-more-section" class="Learn_more_button">Learn More</a>
             </div>
         </div>
     </section>
-    <!--Learm more about us section -->
-    <section class="aboutUs_section">
-       <div class="aboutIs_Container">
-        <div class="aboutUs_p1">
-            <p>Learn More About Our Community and Mission at LightFoot Health Care Limited
-                Delve into the core values and mission that drive our organization. Learn how we foster a supportive community by providing financial assistance for healthcare expenses. Discover our history, registration details, and how you can become a part of our growing network.</p>
+    <section class="aboutUs_section" id="learn-more-section">
+        <div class="aboutIs_Container">
+            <div class="aboutUs_p1">
+                <p>Learn More About Our Community and Mission at LightFoot Health Care Limited
+                    Delve into the core values and mission that drive our organization. Learn how we foster a supportive community by providing financial assistance for healthcare expenses. Discover our history, registration details, and how you can become a part of our growing network.</p>
+            </div>
+            <div class="aboutUs_img1">
+                <img src="" alt="about us image">
+            </div>
+            <div class="aboutUs_p2">
+                <p>Get a detailed understanding of our operational structure, monthly contribution model, and claims process. Learn how our registered organization assists members with settling hospital bills and provides financial security.</p>
+            </div>
+            <div class="aboutUs_img2 ">
+                <img src="" alt="about us image">
+            </div>
         </div>
-        <div class="aboutUs_img1">
-            <img src="" alt="about us image">
-        </div>
-        <div class="aboutUs_p2">
-            <p>Get a detailed understanding of our operational structure, monthly contribution model, and claims process. Learn how our registered organization assists members with settling hospital bills and provides financial security.</p>
-        </div>
-       <div class="aboutUs_img2 ">
-            <img src="" alt="about us image">
-       </div>
-       </div>
-    </section >
-    <!--visit our social media pages section-->
+    </section>
     <section class="social_media_section">
         <div class="socials_section">
             <div>
@@ -119,41 +113,57 @@
             </div>
             <div>
                 <ul>
-                    <li ><a href="">Instagram</a></li>
-                    <li><a href="">Facebook</a></li>
-                    <li><a href="">X</a></li>
-                    <li ><a href="">WhatsApp</a></li>
+                    <li>
+                        <a href="https://www.instagram.com/">
+                            <img src="images/instagram-icon.png" alt="Instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/">
+                            <img src="images/facebook-icon.png" alt="Facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/">
+                            <img src="images/x-icon.png" alt="X (Twitter)">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.whatsapp.com/">
+                            <img src="images/whatsapp-icon.png" alt="WhatsApp">
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
-    </section class="Contact_section">
-    <!--Contact form section-->
-    <section>
+    </section>
+    <section class="contact_form_section" id="contact-section">
         <div class="contact_form_container">
             <div class="contactForm">
-                <form>
-                    <label for="name">First name:</label>
-                    <input type="text" id="fname" name="fname"><br>
-                    <label for="lastname">Last Name</label>
-                    <input type="text" id="lname" name="lname"><br>
-                    <label>Message</label>
-                    <input type="text" id="Message" name="Message"><br>
-                    <button type="button" name="Send" class="form_button">Send</button>
+                <form id="contactForm">
+                    <h2>Contact Us</h2>
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname" required><br>
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname" required><br>
+                    <label for="Message">Message</label>
+                    <textarea id="Message" name="Message" required></textarea><br>
+                    <button type="submit" class="form_button">Send</button>
                 </form>
+                <div id="form-message"></div>
             </div>
             <div class="contact_form_list">
-                <a>Home</a>
-                <a>About Us</a>
-                <a>Contact Form</a>
+                <a href="/">Home</a>
+                <a href="#about-us-section">About Us</a>
+                <a href="#contact-section">Contact Form</a>
             </div>
             <div class="phone_numbers">
                 <ol>
-                    <li> <a>Logo</a></li>
-                    <li><a>Phone</a></li>
-                    <li><a>Location</a></li>
+                    <li><a href="">Logo</a></li>
+                    <li><a href="">Phone</a></li>
+                    <li><a href="">Location</a></li>
                 </ol>
             </div>
-
         </div>
     </section>
     <section class="footer_section">
@@ -161,6 +171,52 @@
             <p>Copyright 2025 All Rights Reserved LightFoot Health Care Limited</p>
         </footer>
     </section>
+    <script>
+        // JavaScript for automatic slideshow
+        let slideIndex = 0; //start at zero
+        showSlides();
 
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("my_slides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+    </script>
+    <script>
+        //JavaScript for Contact Form
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const form = event.target;
+            const formData = new FormData(form);
+
+            fetch('/submit-form', { // Replace '/submit-form' with your server endpoint
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json()) //parse response to json format.
+            .then(data => {
+                document.getElementById('form-message').textContent = data.message;
+                if(data.success) {
+                    form.reset(); //reset form after success.
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('form-message').textContent = 'An error occurred. Please try again.';
+            });
+        });
+    </script>
 </body>
 </html>

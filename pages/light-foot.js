@@ -24,3 +24,13 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+
+// JavaScript for Mobile Menu Toggle
+c// JavaScript for mobile menu toggle
+const mobileMenu = document.getElementById('mobile_menu');
+const navMenu = document.querySelector('.navbar_menu');
+
+mobileMenu.addEventListener('click', () => {
+  mobileMenu.classList.toggle('active');
+  navMenu.classList.toggle('active');
+});
