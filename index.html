@@ -1,233 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="light-foot.css">
-    <script src="light-foot.js" defer></script>
     <title>Light Foot Health Care Limited</title>
-    <link rel="icon" href="images/fav-icon.jpeg" type="image/jpeg">
-</head>
+    <link rel="stylesheet" href="light-foot.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/light-foot-logo.png" type="image/png">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pEfa/VfnFfiNdpUurF2tPv0QFWoX6oHyr3Cr9i3lIOZcTVrRt58OVfQnPrqfrda+vD4cljIrY+7d6Q6h2+x4Vg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+</head>
 <body>
-    <nav class="nav_bar">
+    <!-- Navbar -->
+    <header>
+    <nav class="nav_bar" aria-label="Main Navigation">
         <div class="nav_bar_container">
-            <a href="#" id="nav_bar_logo"><img src="images/WhatsApp Image 2025-04-06 at 22.21.37.jpeg"
-                    alt="Light Foot Logo"></a>
-            <div class="nav_bar_toggle">
+            <!-- Site Logo -->
+            <a href="#" id="nav_bar_logo" class="site_name">
+                <img src="images/light-foot-logo.png" alt="Light Foot Health Care Logo" class="nav_logo">
+            </a>
+
+            <!-- Hamburger Menu (Mobile) -->
+            <button class="nav_bar_toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
+
+            <!-- Menu Links -->
             <ul class="navbar_menu">
-                <li class="navbar_item">
-                    <a href="#" class="navbar_link">
-                        Home
-                    </a>
-                </li>
-                <li class="navbar_item">
-                    <a href="#learn-more-section" class="navbar_link">
-                        Learn More
-                    </a>
-                </li>
-                <li class="navbar_item">
-                    <a href="#contact-section" class="navbar_link">
-                        Contact Us
-                    </a>
-                </li>
+                <li class="navbar_item"><a href="#" class="navbar_link">Home</a></li>
+                <li class="navbar_item"><a href="#services-section" class="navbar_link">Services</a></li>
+                <li class="navbar_item"><a href="#membership-section" class="navbar_link">Memberships</a></li>
+                <li class="navbar_item"><a href="#contact-section" class="navbar_link">24/7 Call Center</a></li>
             </ul>
         </div>
     </nav>
-    <main>
-        <section class="sliding_image_section">
-            <div class="slideshow_container">
-                <div class="my_slides fade">
-                    <div class="number_text">1 / 3</div>
-                    <img src="images/a man in a lab coat standing with his arms crossed, medical background.jfif"
-                        alt="Slide 1">
-                    <div class="slide_text">Securing Your Health, Easing Your Worries.</div>
-                </div>
-                <div class="my_slides fade">
-                    <div class="number_text">2 / 3</div>
-                    <img src="images/Afrika humanitaire hulp arts die voor de patiënt zorgt _ Gratis Foto.jfif"
-                        alt="Slide 2">
-                    <div class="slide_text">Financial Support for Your Healthcare Needs.</div>
-                </div>
-                <div class="my_slides fade">
-                    <div class="number_text">3 / 3</div>
-                    <img src="images/Premium Photo _ Black nurse isolated at the hospital.jfif" alt="Slide 3">
-                    <div class="slide_text">Light Foot: Your Partner in Health and Security.</div>
-                </div>
+</header>
+
+    <section class="hero_section">
+    <div class="hero_content">
+        <h1 class="hero_heading">Care with a Light Touch</h1>
+        <p class="hero_subtext">
+            Welcome to Light Foot Health Care Limited, your trusted partner in accessible and affordable healthcare. 
+            We provide a wide range of medical services with compassion and professionalism.
+        </p>
+        <a href="#services-section" class="hero_button">Explore Our Services</a>
+    </div>
+</section>
+
+<section class="services_section" id="services-section">
+    <div class="services_container">
+        <h2 class="services_heading">Our Healthcare Services</h2>
+        <p class="services_intro">
+            We are committed to providing a wide array of high-quality medical services to our community. 
+            Registered members enjoy exclusive access to free services.
+        </p>
+
+        <div class="services_grid">
+            <div class="service_card">
+                <h3>Inpatient & Outpatient Services</h3>
+                <p>Comprehensive medical care for both admitted patients and those visiting for consultations.</p>
             </div>
-            <div class="dot_container">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
+
+            <div class="service_card">
+                <h3>Free Evacuation for Members</h3>
+                <p>Members Only — Free 24/7 emergency response and safe transportation for our members.</p>
             </div>
-        </section>
-        <section class="infomation_section">
-            <div class="information_container">
-                <div class="informatin_image_conatiner">
-                    <img src="images/Afrika humanitaire hulp arts die voor de patiënt zorgt _ Gratis Foto.jfif"
-                        alt="Information Image">
-                </div>
-                <div class="information_text">
-                    <p>Who we are</p>
-                </div>
-                <div class="text">
-                    <h1>Who we are:</h1>
-                    <p>Light Foot Health Care Limited is a registered organization where members contribute monthly for
-                        health benefits. It was started and registered in 2024 to help members pay hospital bills. Our main
-                        office is in Nairobi City, on Moi Avenue, Imenti House, 1st floor.</p>
-                </div>
-                <div class="information_button">
-                    <a href="#learn-more-section" class="Learn_more_button">Learn More</a>
-                </div>
+
+            <div class="service_card">
+                <h3>Free Home Visits for Members</h3>
+                <p>Members Only — Free professional healthcare services delivered to our members in the comfort of their home.</p>
             </div>
-        </section>
-        <section class="aboutUs_section" id="learn-more-section">
-            <div class="aboutIs_Container">
-                <div class="aboutUs_p1">
-                    <p>Learn More About Our Community and Mission at LightFoot Health Care Limited
-                        Delve into the core values and mission that drive our organization. Learn how we foster a supportive
-                        community by providing financial assistance for healthcare expenses. Discover our history,
-                        registration details, and how you can become a part of our growing network.</p>
-                </div>
-                <div class="aboutUs_img1">
-                    <img src="images/55d59bef-996f-4500-9fad-938df27f16d5.jfif" alt="about us image">
-                </div>
-                <div class="aboutUs_p2">
-                    <p>Get a detailed understanding of our operational structure, monthly contribution model, and claims
-                        process. Learn how our registered organization assists members with settling hospital bills and
-                        provides financial security.</p>
-                </div>
-                <div class="aboutUs_img2 ">
-                    <img src="images/f6b60cc7-f3b1-4459-9f27-ce27e15f960f.jfif" alt="about us image">
-                </div>
+
+            <div class="service_card">
+                <h3>Home Sample Collection & Drug Delivery</h3>
+                <p>We collect lab samples and deliver medical drugs at our members' homes.</p>
             </div>
-        </section>
-        <section class="social_media_section">
-            <div class="socials_section">
-                <div>
-                    <h1>Visit us on our social media.</h1>
-                </div>
-                <div>
-                    <p>Learn more about Light Foot Health Care Limited and stay informed. Visit our official social media
-                        channels for details.</p>
-                </div>
-                <div>
-                    <ul class="social_media_icons">
-                        <li>
-                            <a href="https://wa.me/254790173986">
-                                <img src="images/whatsapp.png" alt="WhatsApp">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/profile.php?id=61574914957710">
-                                <img src="images/facebook.png" alt="Facebook">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/">
-                                <img src="images/twitter.png" alt="X (Twitter)">
-                            </a>
-                        </li>
-                        <li>
-                            
-                        </li>
-                    </ul>
-                </div>
+
+            <div class="service_card">
+                <h3>Referrals to Selected Hospitals</h3>
+                <p>Seamless referral process to a network of trusted specialist hospitals when needed.</p>
             </div>
-        </section>
-        <section class="contact_form_section" id="contact-section">
-            <div class="contact_form_container">
-                <div class="contact_form_left">
-                    <h2>Contact Us</h2>
-                    <p>Send us a message</p>
-                    <form id="contactForm" action="https://formsubmit.co/lightfoothealthcareltd@gmail.com" method="post">
-                        <input type="text" id="fname" name="name" placeholder="Full name" required><br>
-                        <input type="email" id="email" name="email" placeholder="Your Email" required><br>
-                        <textarea id="message" name="message" placeholder="Your Message" required></textarea><br>
-                        <button type="submit" class="form_button">Submit</button>
-                    </form>
-                    <div id="form-message"></div>
-                </div>
-                <div class="contact_form_middle">
-                    <h2>Sitemap</h2>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#about-us-section">About Us</a></li>
-                        <li><a href="#contact-section">Contact Form</a></li>
-                    </ul>
-                </div>
-                <div class="contact_form_right">
-                    <div class="logo-circle">
-                        <img src="images/WhatsApp Image 2025-04-06 at 22.21.37.jpeg" alt="Your Logo">
+
+            <div class="service_card">
+                <h3>Free 24/7 Consultation for Members</h3>
+                <p>Members Only — Free, unlimited access to medical advice anytime via our dedicated phone line.</p>
+            </div>
+
+            <div class="service_card">
+                <h3>ANC & Maternity</h3>
+                <p>Complete care for expectant mothers through pregnancy, delivery, and postpartum.</p>
+            </div>
+
+            <div class="service_card">
+                <h3>Dental Services</h3>
+                <p>A range of dental services to ensure your oral health is in top condition.</p>
+            </div>
+
+            <div class="service_card">
+                <h3>Treatment in Government Hospitals</h3>
+                <p>Facilitating and covering treatment costs in designated government hospitals.</p>
+            </div>
+        </div>
+    </div>
+</section>
+  <!-- MEMBERSHIP SECTION -->
+    <section class="membership_section" id="membership-section">
+        <div class="membership_container">
+            <h2 class="membership_heading">Become a Light Foot Health Member</h2>
+            <p class="membership_intro">
+                Join the LightFoot Health family and enjoy peace of mind with our affordable, comprehensive healthcare coverage and exclusive member-only benefits.
+            </p>
+
+            <!-- Membership Payment -->
+            <div class="membership_payment_card">
+                <h3>Membership Payment</h3>
+                <p>Pay your contributions easily via M-Pesa.</p>
+                <div class="payment_options">
+                    <div class="payment_card">
+                        <p class="amount">KES 900</p>
+                        <p>Per Month</p>
                     </div>
-                    <div class="contact-info">
-                        <div class="phone">
-                            <img src="images/telephone.png" alt="Phone">
-                            <div>
-                                <p><a href="tel:+254790173986">+254790173986</a></p>
-                                <p><a href="tel:+254116215934">+254116215934</a></p>
-                                <p><a href="tel:+254116233497">+254116233497</a></p>
-                            </div>
-                        </div>
-                        <div class="email">
-                            <img src="images/mail.png" alt="Email">
-                            <p>lightfoothealthcareltd@gmail.com</p>
-                        </div>
-                        <div class="address">
-                            <img src="images/pin.png" alt="Address">
-                            <p>Nairobi, Moi Avenue, Imenti House 1st floor</p>
-                        </div>
+                    <div class="payment_card">
+                        <p class="amount">KES 30</p>
+                        <p>Per Day</p>
                     </div>
                 </div>
-                <div class="instagram-brands">
+            </div>
+
+            <!-- How to Pay -->
+            <div class="how_to_pay_card">
+                <h3>How to Pay with M-Pesa (Buy Goods)</h3>
+                <p><strong>Buy Goods Till Number:</strong> 4955890</p>
+                <p><strong>Business Name:</strong> LIGHT FOOT HEALTH CARE</p>
+                <ol>
+                    <li>Go to the M-Pesa menu on your phone.</li>
+                    <li>Select "Lipa na M-Pesa", then "Buy Goods and Services".</li>
+                    <li>Enter Till Number: 4955890.</li>
+                    <li>Enter the amount you wish to pay (e.g., 900 for monthly).</li>
+                    <li>Enter your M-Pesa PIN and confirm the transaction.</li>
+                </ol>
+            </div>
+
+            <!-- Exclusive Membership Benefits -->
+            <div class="exclusive_benefits_section">
+                <h3>Exclusive Membership Benefits</h3>
+                <div class="benefits_cards">
+                    <div class="benefit_card">Free Ambulance Services (Members Only)</div>
+                    <div class="benefit_card">Free Home Visits (Members Only)</div>
+                    <div class="benefit_card">Free Phone Consultation (Members Only)</div>
+                    <div class="benefit_card">At-Home Lab & Pharmacy (Members Only)</div>
                 </div>
             </div>
-        </section>
-    </main>
-    <section class="footer_section">
-        <footer>
-            <p>Copyright 2025 All Rights Reserved LightFoot Health Care Limited</p>
-        </footer>
+
+            <!-- General Membership Benefits -->
+            <div class="general_benefits_section">
+                <h3>General Membership Benefits</h3>
+                <div class="benefits_cards">
+                    <div class="benefit_card">Comprehensive Coverage: Primary contributor, spouse, up to 5 dependents</div>
+                    <div class="benefit_card">Free Medical Check-up (Age 50+)</div>
+                    <div class="benefit_card">Scheme Activation: Active 30 days after first contribution</div>
+                    <div class="benefit_card">Flexible Contributions</div>
+                </div>
+            </div>
+
+            <!-- Registration Requirements -->
+            <div class="registration_requirements_section">
+                <h3>Registration Requirements</h3>
+                <div class="benefits_cards">
+                    <div class="benefit_card">National ID / Passport (Primary contributor & spouse)</div>
+                    <div class="benefit_card">Dependents' Birth Certificates (for all children)</div>
+                    <div class="benefit_card">Passport Photos (Contributor & spouse)</div>
+                    <div class="benefit_card">Registration Form (Duly filled and signed)</div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+<div class="membership_cta">
+    <a href="https://formspree.io/f/myzpvvoe" target="_blank" class="membership_button">Register Now</a>
+</div>
+
+        </div>
+
+
+        <!-- Membership Registration Form -->
+<section class="registration_form_section" id="registration-form">
+    <div class="registration_form_container">
+        <h3>Register as a Member</h3>
+        <form action="https://formspree.io/f/myzpvvoe" method="POST">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="message">Message / Notes:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <!-- Hidden field for spam protection -->
+            <input type="text" name="_gotcha" style="display:none">
+
+            <button type="submit" class="membership_button">Register Now</button>
+        </form>
+    </div>
+</section>
+
     </section>
-    <script>
-        // JavaScript for automatic slideshow
-        let slideIndex = 0; //start at zero
-        showSlides();
+<footer class="site_footer">
+    <div class="footer_container">
+        <div class="footer_about">
+            <h3>Light Foot Health Care Limited</h3>
+            <p>Your trusted partner in accessible and affordable healthcare. Providing quality medical services with a light touch.</p>
 
-        function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("my_slides");
-            let dots = document.getElementsByClassName("dot");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
-        }
+            <!-- Social Media Icons -->
+            <div class="footer_social">
+                <a href="https://wa.me/254790173986" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61579005337642" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
 
-        // JavaScript for Hamburger Menu
-        const navBarToggle = document.querySelector('.nav_bar_toggle');
-        const navbarMenu = document.querySelector('.navbar_menu');
+        <div class="footer_links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#services-section">Services</a></li>
+                <li><a href="#membership-section">Membership</a></li>
+                <li><a href="#contact-section">Contact Us</a></li>
+                <li><a href="#registration-form">Register</a></li>
+            </ul>
+        </div>
 
-        navBarToggle.addEventListener('click', () => {
-            navBarToggle.classList.toggle('active');
-            navbarMenu.classList.toggle('active');
-        });
-    </script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <div class="footer_contact">
+            <h4>24/7 Call Center</h4>
+            <p>0116215934</p>
+            <p>0790173986</p>
+            <p>Nairobi, Kenya</p>
+        </div>
+    </div>
+
+    <div class="footer_bottom">
+        <p>© 2025 Light Foot Health Care Limited. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+<!-- Add Font Awesome CDN in <head> -->
+<!-- FAB -->
+<a href="tel:+254790173986" class="fab" aria-label="Call 24/7">
+    <i class="fas fa-phone"></i>
+</a>
+<p id="thank_you" style="display:none;">Thank you! Your registration has been sent.</p>
+
+<script>
+const form = document.querySelector('form');
+form.addEventListener('submit', function(e) {
+    document.getElementById('thank_you').style.display = 'block';
+});
+</script>
+
+
+    <script src="light-foot.js"></script>
 </body>
-
 </html>
