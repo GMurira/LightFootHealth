@@ -68,6 +68,8 @@
     border: none;
     background: none;
     cursor: pointer;
+    position: relative;   /* Needed for z-index to work */
+    z-index: 1001;        /* Ensure toggle is above menu */
 }
 
 .nav_bar_toggle .bar {
@@ -75,6 +77,20 @@
     height: 3px;
     background-color: #333;
     border-radius: 2px;
+    transition: all 0.3s ease; /* Smooth X animation */
+}
+
+/* Transform bars into X when active */
+.nav_bar_toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav_bar_toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav_bar_toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* Mobile Responsive */
@@ -94,7 +110,7 @@
         padding: 2rem 1rem;
         box-shadow: -2px 0 10px rgba(0,0,0,0.1);
         transition: right 0.3s ease-in-out;
-        z-index: 999;
+        z-index: 1000; /* Lower than toggle */
         overflow-y: auto; /* Scroll if menu is long */
     }
 
@@ -106,6 +122,7 @@
         margin: 1rem 0;
     }
 }
+
 
 /* ===== HERO SECTION ===== */
 .hero_section {
