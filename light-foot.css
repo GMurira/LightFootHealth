@@ -1,16 +1,50 @@
 /* Navbar Container */
 /* Navbar Logo */
 .nav_logo {
-    height: 80px; /* 2X larger for desktop */
-    width: auto;
+    height: 80px;           /* Desktop size */
+    width: 80px;            /* Keep it square for circular shape */
     display: block;
+    margin: 0;              /* Remove extra spacing above/below */
+    border-radius: 50%;     /* Makes the logo circular */
+    object-fit: cover;      /* Ensures image covers container without distortion */
+    overflow: hidden;       /* Hides overflow outside the circle */
 }
 
 /* Navbar adjustments */
 .nav_bar_container {
     display: flex;
-    align-items: center;
+    align-items: center;    
     justify-content: space-between;
+    padding: 0.5rem 1rem;   /* Adjust vertical spacing */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .nav_logo {
+        height: 70px;
+        width: 70px;        /* Keep square for circular shape */
+    }
+}
+
+
+/* Hamburger Menu */
+.nav_bar_toggle {
+    display: none; /* Only show on mobile */
+    flex-direction: column;
+    gap: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.nav_bar_toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333; /* Hamburger bars */
+    border-radius: 2px;
+    margin: 0;
 }
 
 /* Mobile Menu */
@@ -23,10 +57,20 @@
         flex-direction: column;
         display: none; /* Hidden by default, toggle with JS */
         width: 100%;
+        position: fixed; /* Slide-in menu */
+        top: 0;
+        right: -100%; /* Hidden offscreen */
+        height: 100%;
+        background-color: #fff;
+        padding: 2rem 1rem;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+        overflow-y: auto;
     }
 
     .navbar_menu.active {
-        display: flex;
+        right: 0; /* Slide in fully */
     }
 
     .navbar_item {
@@ -35,10 +79,9 @@
     }
 
     .nav_bar_toggle {
-        display: block;
+        display: flex;
     }
 }
-
 
 
 /* Menu Links */
@@ -175,7 +218,6 @@
         font-size: 1rem;
     }
 }
-
 /* ===== SERVICES SECTION ===== */
 .services_section {
     padding: 5rem 1rem;
@@ -226,6 +268,17 @@
     font-size: 1.2rem;
     color: #007BFF; /* Blue title */
     margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center; /* Align icon and text vertically */
+    justify-content: center;
+}
+
+/* Service card header icons */
+.service_card h3 i {
+    margin-right: 0.5rem; /* Space between icon and text */
+    color: #007BFF;       /* Match your brand color */
+    font-size: 1.3rem;    /* Slightly larger than text */
+    vertical-align: middle;
 }
 
 .service_card p {
@@ -242,7 +295,16 @@
     .services_intro {
         font-size: 1rem;
     }
+
+    .service_card h3 {
+        font-size: 1.1rem;
+    }
+
+    .service_card h3 i {
+        font-size: 1.2rem;
+    }
 }
+
 /* ===== FLOATING ACTION BUTTON ===== */
 .fab {
     position: fixed;
@@ -603,15 +665,31 @@
 }
 
 .footer_social a {
-    color: #fff; /* White icons on blue background */
-    font-size: 1.5rem;
-    transition: color 0.3s;
+    color: #fff; /* White icon color */
+    font-size: 1.4rem; /* Icon size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.footer_social a i {
+    font-size: 1.4rem; /* Ensure proper size */
+    line-height: 1;
 }
 
 .footer_social a:hover {
-    color: #f0f0f0; /* Slightly lighter on hover */
+    color: #007BFF; /* Brand blue */
+    background-color: #fff;
+    transform: scale(1.1);
 }
 
+/* Footer bottom */
 .footer_bottom {
     text-align: center;
     margin-top: 2rem;
@@ -625,28 +703,29 @@
     .footer_container {
         flex-direction: column;
         text-align: center;
-        gap: 1rem; /* Reduce vertical gaps */
+        gap: 1rem;
     }
 
     .site_footer {
-        padding: 2rem 1rem 1rem; /* Less top padding for smaller screens */
+        padding: 2rem 1rem 1rem;
     }
 
     .footer_about, .footer_links, .footer_contact {
         flex: 1 1 auto;
-        margin-bottom: 0.5rem; /* Reduce spacing between sections */
+        margin-bottom: 0.5rem;
     }
 
     .footer_bottom {
-        margin-top: 1rem; /* Reduce space above bottom text */
+        margin-top: 1rem;
         padding-top: 0.5rem;
     }
 
     .footer_social {
         justify-content: center;
-        margin-top: 0.5rem; /* Less spacing above icons */
+        margin-top: 0.5rem;
     }
 }
+
 
 /* ===== Registration Form Section ===== */
 .registration_form_section {
@@ -715,3 +794,118 @@
     transform: translateY(-2px);
 }
 
+/* ===== TESTIMONIALS SECTION ===== */
+.testimonials_section {
+    padding: 4rem 1rem;
+    background-color: #f7f9fc;
+    text-align: center;
+}
+
+.testimonials_heading {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 0.5rem;
+}
+
+.testimonials_intro {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.testimonials_cards {
+    display: flex;
+    flex-direction: column; /* vertical by default */
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.testimonial_card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.testimonial_text {
+    font-style: italic;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.testimonial_author {
+    font-weight: bold;
+    color: #007BFF;
+    text-align: right;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .testimonials_cards {
+        flex-direction: row; /* horizontal cards on wider screens */
+        justify-content: center;
+    }
+
+    .testimonial_card {
+        flex: 1 1 250px;
+    }
+}
+/* ===== VIDEOS SECTION ===== */
+.videos_section {
+    padding: 4rem 1rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.videos_container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.videos_heading {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 1rem;
+}
+
+.videos_intro {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.videos_grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.video_card {
+    flex: 1 1 350px; /* Minimum width of 350px, grows as needed */
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video_card iframe {
+    width: 100%;
+    height: 250px; /* You can increase this for larger videos */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.video_title {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .video_card iframe {
+        height: 200px;
+    }
+}
