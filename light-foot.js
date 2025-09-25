@@ -1,14 +1,16 @@
-const navBarToggle = document.querySelector('.nav_bar_toggle');
-const navbarMenu = document.querySelector('.navbar_menu');
 
-navBarToggle.addEventListener('click', () => {
-    // Toggle mobile menu
-    navbarMenu.classList.toggle('active');
+// Navbar Hamburger Toggle
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.querySelector(".nav_bar_toggle");
+  const navMenu = document.querySelector(".navbar_menu");
 
-    // Toggle hamburger to X
-    navBarToggle.classList.toggle('active');
+  if (toggleBtn && navMenu) {
+    toggleBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
 
-    // Update aria-expanded for accessibility
-    const expanded = navBarToggle.getAttribute('aria-expanded') === 'true' || false;
-    navBarToggle.setAttribute('aria-expanded', !expanded);
+      // update aria-expanded for accessibility
+      const expanded = toggleBtn.getAttribute("aria-expanded") === "true";
+      toggleBtn.setAttribute("aria-expanded", !expanded);
+    });
+  }
 });

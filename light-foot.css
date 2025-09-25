@@ -27,9 +27,9 @@
 }
 
 
-/* Hamburger Menu */
+/* Default: hide hamburger on larger screens */
 .nav_bar_toggle {
-    display: none; /* Only show on mobile */
+    display: none;
     flex-direction: column;
     gap: 5px;
     border: none;
@@ -39,13 +39,40 @@
     padding: 0;
 }
 
+/* Hamburger bars */
 .nav_bar_toggle .bar {
     width: 25px;
     height: 3px;
-    background-color: #333; /* Hamburger bars */
+    background-color: #333;
     border-radius: 2px;
-    margin: 0;
 }
+
+/* Show hamburger on mobile */
+@media (max-width: 768px) {
+    .nav_bar_toggle {
+        display: flex;
+    }
+
+    /* Hide nav links by default on mobile */
+    .nav_links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background: #fff;
+        padding: 1rem;
+        position: absolute;
+        top: 60px; /* Adjust depending on header height */
+        right: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        border-radius: 8px;
+    }
+
+    /* Show when active */
+    .nav_links.active {
+        display: flex;
+    }
+}
+
 
 /* Mobile Menu */
 @media (max-width: 768px) {
