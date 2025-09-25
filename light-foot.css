@@ -725,67 +725,108 @@
         margin-top: 0.5rem;
     }
 }
-/* ==== Membership plans ===== */
+/* Membership Section */
 .membership_plans {
-  margin-top: 2rem;
   text-align: center;
+  padding: 3rem 1rem;
+  background: #f9fafc;
 }
 
+.membership_heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.membership_intro {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Grid Layout */
 .plans_grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
+/* Plan Cards */
 .plan_card {
   background: #fff;
   border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  padding: 2rem 1.5rem;
   text-align: left;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .plan_card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
 }
 
 .plan_card h3 {
+  font-size: 1.4rem;
   margin-bottom: 0.5rem;
-  font-size: 1.3rem;
-  color: #2b6777;
 }
 
 .plan_price {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #1a4d2e;
+  color: #0077cc;
   margin-bottom: 1rem;
 }
 
 .plan_card ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .plan_card ul li {
-  margin: 0.4rem 0;
-  padding-left: 1.2rem;
-  position: relative;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+  color: #444;
 }
 
-.plan_card ul li::before {
-  content: "✔";
-  color: #2b6777;
-  font-weight: bold;
-  position: absolute;
-  left: 0;
+.plan_card ul li:last-child {
+  border-bottom: none;
 }
 
-.plan_card.silver { border-top: 5px solid silver; }
-.plan_card.gold { border-top: 5px solid goldenrod; }
-.plan_card.diamond { border-top: 5px solid #4a90e2; }
+/* Different Styles per Plan */
+.diamond {
+  border-top: 5px solid #b9f2ff; /* diamond blue */
+}
+
+.gold {
+  border-top: 5px solid #ffd700; /* gold yellow */
+}
+
+.silver {
+  border-top: 5px solid #c0c0c0; /* silver gray */
+}
+
+/* Highlight Diamond Plan */
+.diamond {
+  background: #f0fbff;
+  box-shadow: 0 8px 24px rgba(0, 119, 204, 0.15);
+}
+
+.diamond h3 {
+  color: #0077cc;
+}
+
+/* Responsive Fix */
+@media (max-width: 600px) {
+  .plan_card {
+    padding: 1.5rem 1rem;
+  }
+}
 
 
 /* ===== Registration Form Section ===== */
