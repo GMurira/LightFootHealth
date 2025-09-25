@@ -145,69 +145,71 @@
                 Join the LightFoot Health family and enjoy peace of mind with our affordable, comprehensive healthcare coverage and exclusive member-only benefits.
             </p>
 
-            <!-- Membership Plans -->
-<div class="membership_plans">
-  <h2 class="membership_heading">Our Membership Packages</h2>
+ <!-- Membership Plans -->
+<section id="membership-section" class="membership_plans">
+  <h2 class="membership_heading">Membership Packages</h2>
   <p class="membership_intro">
-    Each membership tier offers increasing benefits — with <strong>Diamond</strong> providing the most comprehensive coverage, followed by <strong>Gold</strong>, and then <strong>Silver</strong>.
+    Each service has more benefits starting from <strong>Diamond</strong> towards <strong>Gold</strong> than <strong>Silver</strong>.
   </p>
 
   <div class="plans_grid">
-
     <!-- Diamond Plan -->
     <div class="plan_card diamond">
+      <span class="badge">Best Value</span>
       <h3>Diamond Membership</h3>
-      <p class="plan_price">KES 2,000 / Month</p>
+      <p class="plan_price">Monthly Contribution: Ksh 2,000</p>
       <ul>
-        <li>Outpatient cover: up to Ksh 2,000</li>
-        <li>Inpatient cover: Ksh 6,000 per day (max 4 days)</li>
-        <li>X-Rays: Ksh 1,500</li>
-        <li>Ultrasound: Ksh 1,500</li>
-        <li>Dental services: Ksh 1,500</li>
-        <li>ANC services: Ksh 2,200</li>
-        <li>Normal delivery: Ksh 14,000</li>
-        <li>Caesarian section: Ksh 34,000</li>
+        <li>Outpatient covers up to Ksh 2,000</li>
+        <li>Inpatient covers up to Ksh 6,000/day (max 4 days)</li>
+        <li>X-rays cover up to Ksh 1,500</li>
+        <li>Ultrasound covers up to Ksh 1,500</li>
+        <li>Dental services (Extraction & Treatment) Ksh 1,500</li>
+        <li>ANC services Ksh 2,200</li>
+        <li>Normal delivery Ksh 14,000</li>
+        <li>Caesarian section Ksh 34,000</li>
         <li>Home deliveries</li>
         <li>Free ambulance services</li>
-        <li>Home visits & client care at home</li>
+        <li>Home visits</li>
+        <li>Attending to clients at home</li>
       </ul>
     </div>
 
     <!-- Gold Plan -->
     <div class="plan_card gold">
       <h3>Gold Membership</h3>
-      <p class="plan_price">KES 1,400 / Month</p>
+      <p class="plan_price">Monthly Contribution: Ksh 1,400</p>
       <ul>
-        <li>Outpatient cover: Ksh 1,800 per visit (once every 30 days)</li>
-        <li>Inpatient cover: Ksh 5,000 per day (max 4 days)</li>
-        <li>X-Rays: Ksh 1,500</li>
-        <li>Ultrasound: Ksh 1,500</li>
-        <li>Dental services: Ksh 1,000</li>
-        <li>ANC services: Ksh 2,000</li>
-        <li>Normal delivery: Ksh 12,000</li>
-        <li>Caesarian section: Ksh 32,000</li>
+        <li>Outpatient covers up to Ksh 1,800 (once every 30 days)</li>
+        <li>Inpatient covers up to Ksh 5,000/day (max 4 days)</li>
+        <li>X-rays cover up to Ksh 1,500</li>
+        <li>Ultrasound covers up to Ksh 1,500</li>
+        <li>Dental services (Extraction & Treatment) Ksh 1,000</li>
+        <li>ANC services Ksh 2,000</li>
+        <li>Normal delivery Ksh 12,000</li>
+        <li>Caesarian section Ksh 32,000</li>
         <li>Free ambulance services</li>
-        <li>Home visits & client care at home</li>
+        <li>Home visits</li>
+        <li>Attending to clients at home</li>
       </ul>
     </div>
 
     <!-- Silver Plan -->
     <div class="plan_card silver">
       <h3>Silver Membership</h3>
-      <p class="plan_price">KES 900 / Month</p>
+      <p class="plan_price">Monthly Contribution: Ksh 900</p>
       <ul>
-        <li>Outpatient cover: Ksh 1,500 per visit (once every 30 days)</li>
-        <li>Inpatient cover: Ksh 4,000 per day (max 4 days)</li>
-        <li>Normal delivery: Ksh 12,000</li>
-        <li>Caesarian section: Ksh 30,000</li>
-        <li>Dental services: Ksh 1,000</li>
-        <li>Ultrasound: Ksh 1,500</li>
-        <li>X-Rays: Ksh 1,500</li>
+        <li>Outpatient covers up to Ksh 1,500 (once every 30 days)</li>
+        <li>Inpatient covers up to Ksh 4,000/day (max 4 days)</li>
+        <li>Normal delivery Ksh 12,000</li>
+        <li>Caesarian section Ksh 30,000</li>
+        <li>Dental services (Extraction & Treatment) Ksh 1,000</li>
+        <li>Ultrasound covers up to Ksh 1,500</li>
+        <li>X-rays cover up to Ksh 1,500</li>
       </ul>
     </div>
-
   </div>
-</div>
+</section>
+
 
 
             <!-- Membership Payment -->
@@ -446,6 +448,8 @@ form.addEventListener('submit', function(e) {
 
     <script src="light-foot.js"></script>
 </body>
+
+
 <!-- Paste this into <head> for a quick test -->
 <style>
 /* Membership test styles (high specificity) */
@@ -503,6 +507,7 @@ form.addEventListener('submit', function(e) {
   border-top: 5px solid #b9f2ff;
   background: #f0fbff;
   box-shadow: 0 10px 30px rgba(0,119,204,0.08);
+  position: relative; /* for badge positioning */
 }
 #membership-section .plan_card.gold {
   border-top: 5px solid #ffd700;
@@ -511,10 +516,23 @@ form.addEventListener('submit', function(e) {
   border-top: 5px solid #c0c0c0;
 }
 
+/* Badge style */
+#membership-section .plan_card .badge {
+  display: inline-block;
+  background: #0077cc;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+}
+
 /* quick mobile tweak */
 @media (max-width: 600px) {
   #membership-section .plan_card { padding: 1rem; }
 }
 </style>
+
 
 </html>
